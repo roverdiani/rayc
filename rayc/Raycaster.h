@@ -11,6 +11,7 @@
 #include "Map.h"
 #include "Player.h"
 #include "Ray.h"
+#include "Fps.h"
 
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
@@ -40,13 +41,13 @@ private:
     void ProcessKey(sf::Event::KeyEvent keyEvent, bool keyPressed);
 
     std::vector<std::unique_ptr<Ray>> _rays;
-
     std::shared_ptr<Map> _map;
     std::shared_ptr<Player> _player;
 
     sf::Event _event{};
     std::shared_ptr<sf::RenderWindow> _renderWindow;
     std::unique_ptr<sf::Clock> _deltaClock;
+    std::unique_ptr<Fps> _fps;
 };
 
 #endif //RAYC_RAYCASTER_H

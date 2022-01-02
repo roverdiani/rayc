@@ -7,5 +7,5 @@ find_package(SFML 2.5 COMPONENTS graphics REQUIRED)
 
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(rayc main.cpp Raycaster.cpp Raycaster.h Map.cpp Map.h Player.cpp Player.h Utils.cpp Utils.h Ray.cpp Ray.h)
+add_executable(rayc main.cpp Raycaster.cpp Raycaster.h Map.cpp Map.h Player.cpp Player.h Utils.cpp Utils.h Ray.cpp Ray.h Fps.cpp Fps.h)
 target_link_libraries(rayc sfml-graphics)

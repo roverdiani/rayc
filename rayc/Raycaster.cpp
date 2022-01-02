@@ -16,6 +16,8 @@ Raycaster::Raycaster()
     sf::View view(sf::FloatRect(0, 0, WINDOW_LOGICAL_WIDTH, WINDOW_LOGICAL_HEIGHT));
     _renderWindow->setView(view);
 
+    _fps = std::make_unique<Fps>();
+
     _map = std::make_shared<Map>();
     _player = std::make_shared<Player>();
 
@@ -76,6 +78,8 @@ void Raycaster::Render()
     _map->Render(_renderWindow);
     RenderRays();
     _player->Render(_renderWindow);
+
+    _fps->Render(_renderWindow);
 
     _renderWindow->display();
 }
